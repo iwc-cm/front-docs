@@ -10,6 +10,9 @@ Welcome to 前端教程's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   basic/html.rst
+   basic/css.rst
+   basic/react.rst
 
 
 Indices and tables

@@ -120,75 +120,185 @@ html基础元素
 
 表格
 
+    表格更复杂一些，使用了四种标签。
+
+    * table: 表示一个表格
+    * tr: 表示表格的一行
+    * td: 表示一个单元格
+    * th: 和td类似，表示一个表头单元格
+
     ::
 
-        <table></table>
+        <table>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>22</td>
+            </tr>
+        </table>
     
     渲染为html如下
 
     .. raw:: html
 
-        <table></table>
+        <table  width="300" border="1" cellpadding="0" cellspacing="0" bordercolor="black" style="border-collapse:collapse;">
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+            </tr>
+            <tr>
+                <td>张三</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>李四</td>
+                <td>22</td>
+            </tr>
+        </table>
 
-图片
+图片 - image
+
+    将图片链接贴到网页。
 
     ::
 
-        <table></table>
+        <img src="//www.baidu.com/img/bd_logo1.png" />
     
     渲染为html如下
 
     .. raw:: html
 
-        <table></table>
+        <img src="//www.baidu.com/img/bd_logo1.png" />
 
-交互控件
+交互控件 - input
+
+    交互控件都是 input, 通过type字段指定其类型。
+
+    其实还有check， 就不介绍了。
 
     ::
 
-        <table></table>
+        <input type="password" placeholder="密码输入框"/>
+        <input placeholder="普通输入框"/> <br />
+        <input type="button">这是一个按钮</input>
     
     渲染为html如下
 
     .. raw:: html
 
-        <table></table>
-
-span
-
-    ::
-
-        <table></table>
-    
-    渲染为html如下
-
-    .. raw:: html
-
-        <table></table>
+        <input type="password" placeholder="密码输入框"/>
+        <input placeholder="普通输入框"/> <br />
+        <input type="button">这是一个按钮</input>
 
 div
 
+    div 可谓是前端开发中最广泛使用的标签。
+
+    div 本身的表现形式是换行， 和 p 差不多。但是可以通过各种css添加样式表现出各种形态。
+    如果需要调整某一块的样式，一般都先通过 div 包一层，然后在上面加 样式。
+
     ::
 
-        <table></table>
+        <div>这是一个div</div>
+        <div>这是第二个div</div>
     
     渲染为html如下
 
     .. raw:: html
 
-        <table></table>
+        <div>这是一个div</div>
+        <div>这是第二个div</div>
+
+span
+
+    span 也比较常用，和 div 差不多。和 div 的区别在于，其默认情况下不会换行。
+
+    ::
+
+        <span>这是一个span</span>
+        <span>这是第二个span</span>
+    
+    渲染为html如下
+
+    .. raw:: html
+
+        <span>这是一个span</span>
+        <span>这是第二个span</span>
 
 Html控件属性
 =============================
 
+在上面的例子中，img 元素就拥有 src 属性， input元素也拥有 type 属性.
+
+.. code-block:: html
+
+    <img src="//www.baidu.com/img/bd_logo1.png" />
+    <input type="button">这是一个按钮</input>
+
+html 控件属性直接写在标签里面。
+
+有一些比较常用的属性。
+
+#. id
+
+    id 用来唯一标示一个元素, 即命名，一个页面不允许两个元素id相同
+    （其实也不是强制的，如果一样的话，会出现一些问题。）。
+
+    任何元素都可以有id。
+
+    .. code-block:: html
+    
+        <img id="my-image" src="//www.baidu.com/img/bd_logo1.png" />
+
+#. class
+
+    class 和 id 类似，也是一个名字，但是可以重复，而且鼓励重复，
+    用来标示同一类的一组控件。比如居右的一组控件可能有一组相同的class。
+    对于样式复用很有帮助。
+
+    一个控件可以有多个 class，通过空格隔开。
+
+    .. code-block:: html
+    
+        <input class="myinput hisinput" type="button">这是一个按钮</input>
+        <input class="myinput" type="button">这是另一个按钮</input>
+
+#. rowspan/colspan
+
+    table 专用，用来制作跨行跨列的表格。不多介绍。
+
+#. style
+
+    用来定义内联css样式，后面会说。不做介绍。
+
 html/head/body
 ================================
 
-    ::
+一般不会直接在一个文件中写 html 元素，而是有一个骨架，主要分为 head/body.
 
-        <table></table>
-    
-    渲染为html如下
+html骨架如下
+
+.. code-block:: html
+
+    <html>
+        <head>
+            <title>这是一个测试页面</title>
+        </head>
+        <body>
+            <div>这是页面正文内容</div>
+        </body>
+    </html>
+
+title 中的内容会显示在浏览器中的标签tab上。
+
+body 中写 html 内容。
 
 
 

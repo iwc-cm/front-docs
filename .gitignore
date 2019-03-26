@@ -1,0 +1,5 @@
+/.mypy*/
+/.vscode/
+/_build/
+*.pyc
+.mypy_cache/

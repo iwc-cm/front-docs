@@ -12,7 +12,9 @@ Welcome to 前端教程's documentation!
 
    basic/html.rst
    basic/css.rst
+   basic/javascript.rst
    basic/react.rst
+   basic/typescript.rst
 
 
 Indices and tables

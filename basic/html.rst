@@ -187,15 +187,15 @@ html基础元素
 
         <input type="password" placeholder="密码输入框"/>
         <input placeholder="普通输入框"/> <br />
-        <input type="button">这是一个按钮</input>
+        <input type="button" value="这是一个按钮" />
     
     渲染为html如下
 
     .. raw:: html
 
-        <input type="password" placeholder="密码输入框"/>
+        <input type="password" placeholder="密码输入框"/> <br />
         <input placeholder="普通输入框"/> <br />
-        <input type="button">这是一个按钮</input>
+        <input type="button" value="这是一个按钮" />
 
 div
 

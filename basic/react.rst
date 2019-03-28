@@ -44,7 +44,11 @@ react有一个组件的概念。可以将一大堆 html标签 封装为一个组
             }
         }
 
+入口
+---------------------------
 
+一般来说，一个React页面的初始状态是一个空页面。首先将一个顶层组件塞到html中，
+这个顶层组件又调用了很多其他子组件。合在一起看就是嵌套的 xml 。
 
 事件
 ---------------------------
@@ -81,6 +85,7 @@ props
 
 了解上述概念后，按照下面的教程做一遍就知道了
 
-教程: https://react.docschina.org/tutorial/tutorial.html
+中文版教程: https://react.docschina.org/tutorial/tutorial.html
+装逼版教程: https://reactjs.org/tutorial/tutorial.html
 
-没有比这讲的更详细的了。
+没有比这讲的更详细的。

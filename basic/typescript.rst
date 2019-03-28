@@ -1,16 +1,89 @@
+###########################################
+typescript 介绍
+###########################################
 
-定义接口
+typscript 是 JavaScript 的一个变种，是 JavaScript 的超集，
+完全向下兼容 JavaScript，并额外提供了静态类型检查。
+
+定义接口(类型)
 =================
+
+.. code-block:: typescript
+
+    interface TreeType {
+        id: string;
+        name: string;
+        age: number;
+    }
+
+    interface ForestType {
+        trees: Array<TreeType>
+    }
+
+    function doSomething(tree: TreeType) {
+        const name = tree.name;
+        // ... ...
+    }
+
+上面是定义接口的例子，使用 ``name: type`` 的形式说明类型。使用 ``interface`` 定义复杂类型。
 
 定义Component
 ===================
 
+定义 component 和原始 JavaScript 区别在于需要加上 props 的定义。
+
+.. code-block:: typescript
+
+    import * as React from 'react';
+    import * as ReactDom from 'react-dom';
+
+    interface MyProps {
+        title: string;
+        items: Array<string>;
+    }
+
+    clsss MyComponent extends React.Component<MyProps, {}> {
+        render() {
+            return <div>
+                <div>{this.props.title}</div>
+                <ul>
+                    {this.props.items.map(item=>(<li>{item}</li>))}
+                </ul>
+            </div>
+        }
+    }
+
+    ReactDom.render(
+        <MyComponent title="all items" items={['item1', 'item2']}/>, 
+        document.getElementById('root')
+    )
+
+
 typescript的类型
 ====================
 
-lambda表达式
+--+
+类型 | 说明
+==+
+boolean | bool型
+number | 数字类型，如整数、浮点
+string | 字符串
+Array<TYPE> | 定义数组类型，如 字符串数组 Array<string>
+TYPE[] | 同 Array , 如 string[]
+[TYPE1, TYPE2, ……] | 定义元组，如 let x: [string, number]
+enum | 定义枚举，如 enum Color {Red, Green, Blue}
+any | 任意类型，如果不给变量定义类型，默认是Any
+void | 和any相反，表示没有任何类型，通常作为函数返回值。
+null/undefined | 就是 null 和 undefined 本身
+never | 表示永远不存在的类型，如 死循环函数的返回值。
+object | 对象类型，即非原始类型（number/string/boolean ...）的其他类型。。
+
+另外有两种类型转换的方法：
+
+#. let two = (<string>one)
+#. let two = (one as string)
+
+详细介绍
 =====================
 
-this
-======================
-
+https://www.tslang.cn/docs/handbook/basic-types.html

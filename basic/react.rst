@@ -83,9 +83,11 @@ props
 完整教程
 ===========================
 
-了解上述概念后，按照下面的教程做一遍就知道了
+了解上述概念后，按照下面的教程做一遍就知道了。
 
 中文版教程: https://react.docschina.org/tutorial/tutorial.html
 装逼版教程: https://reactjs.org/tutorial/tutorial.html
 
 没有比这讲的更详细的。
+
+React 最重要的概念：虚拟dom。有兴趣了解下，不了解也能用。

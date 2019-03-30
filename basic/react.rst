@@ -6,9 +6,34 @@ react 基础
 怎么启动一个React项目
 =================================
 
-外网使用 create-react-app.
+外网使用 create-react-app 工具快速创建react项目.
 
-内网下载 antd_template. 直接修改 ``src/pages/Home/index.tsx``
+前提
+
+    安装nodejs ( https://nodejs.org/zh-cn/ ),
+
+创建react项目
+
+    ::
+
+        # npm更换为taobao源, 因为资本主义网络太慢
+        npm config set registry https://registry.npm.taobao.org
+
+        # 安装 create-react-app 脚手架
+        npm install -g create-react-app
+
+        # 使用 create-react-app 快速创建一个 react+typescript 项目
+        npx create-react-app my-app --typescript
+        
+        # 进入项目，启动
+        cd my-app; npm start
+
+
+如果是内网， 下载 antd_template. 直接修改 ``src/pages/Home/index.tsx``
+
+上面的做完后，打开浏览器访问 http://localhost:3000
+
+浏览器中按 F12 调试。
 
 一些概念
 =====================
@@ -86,6 +111,7 @@ props
 了解上述概念后，按照下面的教程做一遍就知道了。
 
 中文版教程: https://react.docschina.org/tutorial/tutorial.html
+
 装逼版教程: https://reactjs.org/tutorial/tutorial.html
 
 没有比这讲的更详细的。

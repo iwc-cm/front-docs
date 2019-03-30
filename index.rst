@@ -16,6 +16,7 @@ Welcome to 前端教程's documentation!
    basic/react.rst
    basic/typescript.rst
    basic/route.rst
+   basic/mobx.rst
 
 
 Indices and tables
